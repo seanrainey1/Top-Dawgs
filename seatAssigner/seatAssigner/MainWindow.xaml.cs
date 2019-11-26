@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.IO; 
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -27,7 +28,40 @@ namespace seatAssigner
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            int numStudents = 0;
+            Random rand = new Random();
 
+
+            if (File.Exists(fileReadTXT.Text)== true)
+            {
+                
+                var lines = File.ReadAllLines(fileReadTXT.Text);
+
+                foreach (var item in lines)
+                {
+                    
+                    numStudents++;
+                    
+                }
+
+
+
+                if (numStudents>50)
+                {
+                    MessageBox.Show("Number of students is greater than available seats");
+                }
+
+                if(numStudents<=50)
+                {
+                    int x = 0;
+                    do
+                    {
+                        rand.Next(numStudents-1);
+                    } while (x <= numStudents-1);
+                    
+                }
+
+            }
         }
 
         private void nameReadBut_Click(object sender, RoutedEventArgs e)
