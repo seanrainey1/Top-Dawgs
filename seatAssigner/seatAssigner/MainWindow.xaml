@@ -7,10 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="seatAssignBut" Content="Assign Seats" HorizontalAlignment="Left" Height="43" Margin="10,169,0,0" VerticalAlignment="Top" Width="132" Click="Button_Click"/>
-        <Button x:Name="nameReadBut" Content="Read Names" HorizontalAlignment="Left" VerticalAlignment="Top" Width="132" Margin="10,108,0,0" Height="28" Click="nameReadBut_Click"/>
-        <TextBox x:Name="fileReadTXT" HorizontalAlignment="Left" Height="33" Margin="10,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132"/>
+        <Button x:Name="seatAssignBut" Content="Assign Seats" HorizontalAlignment="Left" Height="43" Margin="0,351,0,0" VerticalAlignment="Top" Width="132" Click="Button_Click"/>
+        <Button x:Name="nameReadBut" Content="Read Names" HorizontalAlignment="Left" VerticalAlignment="Top" Width="132" Margin="0,308,0,0" Height="28" Click="nameReadBut_Click"/>
+        <TextBox x:Name="fileReadTXT" HorizontalAlignment="Left" Height="33" Margin="0,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132"/>
         <ListBox x:Name="assignedSeatsLB" HorizontalAlignment="Left" Height="326" Margin="182,10,0,0" VerticalAlignment="Top" Width="546"/>
+        <TextBox x:Name="brokeCompsTXT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="0,54,0,0"/>
+        <Button x:Name="ReadWorkstationsBut" Content="Read Workstations" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="0,93,0,0" Height="29" Click="ReadWorkstationsBut_Click"/>
 
     </Grid>
 </Window>
