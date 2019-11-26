@@ -30,36 +30,43 @@ namespace seatAssigner
         {
             int numStudents = 0;
             Random rand = new Random();
-
+          
 
             if (File.Exists(fileReadTXT.Text)== true)
             {
                 
                 var lines = File.ReadAllLines(fileReadTXT.Text);
 
-                foreach (var item in lines)
+                var first_name = string.Empty;
+                var last_name = string.Empty;
+                List<int> usedSeats = new List<int>();
+                
+              
+
+                for (int i = 1; i < lines.Length; i++)
                 {
+                    var line = lines[i];
+                    var column = line.Split(',');
+                    first_name = column[0];
+                    last_name = column[1];
+                    int assignedSeat = rand.Next(50);
                     
-                    numStudents++;
-                    
-                }
-
-
-
-                if (numStudents>50)
-                {
-                    MessageBox.Show("Number of students is greater than available seats");
-                }
-
-                if(numStudents<=50)
-                {
-                    int x = 0;
-                    do
+                   
+                    if(usedSeats.Contains(assignedSeat))
                     {
-                        rand.Next(numStudents-1);
-                    } while (x <= numStudents-1);
-                    
+                        do
+                        {
+                            assignedSeat = rand.Next(50);
+                        } while (usedSeats.Contains(assignedSeat) == true);
+                    }
+
+                    usedSeats.Add(assignedSeat);
+
+                    assignedSeatsLB.Items.Add($"{first_name} {last_name} seat {assignedSeat}");
                 }
+
+              
+
 
             }
         }
