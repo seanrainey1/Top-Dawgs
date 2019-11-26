@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button x:Name="seatAssignBut" Content="Assign Seats" HorizontalAlignment="Left" Height="46" Margin="10,120,0,0" VerticalAlignment="Top" Width="101" Click="Button_Click"/>
-        <Button x:Name="nameReadBut" Content="Read Names" HorizontalAlignment="Left" VerticalAlignment="Top" Width="101" Margin="10,65,0,0" Height="28"/>
+        <Button x:Name="nameReadBut" Content="Read Names" HorizontalAlignment="Left" VerticalAlignment="Top" Width="101" Margin="10,65,0,0" Height="28" Click="nameReadBut_Click"/>
         <TextBox x:Name="fileReadTXT" HorizontalAlignment="Left" Height="33" Margin="10,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="88" Margin="268,220,0,0" VerticalAlignment="Top" Width="89" RenderTransformOrigin="0.352,0.451"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="88" Margin="393,220,0,0" VerticalAlignment="Top" Width="95"/>
