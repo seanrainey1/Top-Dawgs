@@ -7,8 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Height="40" Margin="10,35,0,0" VerticalAlignment="Top" Width="92" Click="Button_Click"/>
-        <Label Content="Label" HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" VerticalAlignment="Top" Width="92"/>
+        <Button x:Name="seatAssignBut" Content="Assign Seats" HorizontalAlignment="Left" Height="46" Margin="10,120,0,0" VerticalAlignment="Top" Width="101" Click="Button_Click"/>
+        <Button x:Name="nameReadBut" Content="Read Names" HorizontalAlignment="Left" VerticalAlignment="Top" Width="101" Margin="10,65,0,0" Height="28"/>
+        <TextBox x:Name="fileReadTXT" HorizontalAlignment="Left" Height="33" Margin="10,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="88" Margin="268,220,0,0" VerticalAlignment="Top" Width="89" RenderTransformOrigin="0.352,0.451"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="88" Margin="393,220,0,0" VerticalAlignment="Top" Width="95"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="88" Margin="528,220,0,0" VerticalAlignment="Top" Width="97"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="88" Margin="661,220,0,0" VerticalAlignment="Top" Width="100"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="144,65,0,0" VerticalAlignment="Top" Width="91"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="88" Margin="144,220,0,0" VerticalAlignment="Top" Width="91"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="262,65,0,0" VerticalAlignment="Top" Width="95"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="84" Margin="388,64,0,0" VerticalAlignment="Top" Width="100"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="84" Margin="520,64,0,0" VerticalAlignment="Top" Width="105"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="655,65,0,0" VerticalAlignment="Top" Width="106"/>
 
     </Grid>
 </Window>
