@@ -98,5 +98,14 @@ namespace seatAssigner
             var result = dlg.ShowDialog();
             brokeCompsTXT.Text = dlg.FileName;
         }
+
+        private void Print_Click(object sender, RoutedEventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+            if (printDialog.ShowDialog()== true)
+            {
+                printDialog.PrintVisual(grid1, "Printing in progess");
+            }
+        }
     }
 }
