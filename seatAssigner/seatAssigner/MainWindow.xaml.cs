@@ -104,7 +104,7 @@ namespace seatAssigner
             PrintDialog printDialog = new PrintDialog();
             if (printDialog.ShowDialog()== true)
             {
-                printDialog.PrintVisual(grid1, "Printing in progess");
+                printDialog.PrintVisual(assignedSeatsLB, "Printing in progess");
             }
         }
     }
