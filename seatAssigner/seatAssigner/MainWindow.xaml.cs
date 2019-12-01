@@ -75,7 +75,7 @@ namespace seatAssigner
 
                     usedSeats.Add(Convert.ToString(assignedSeat));
 
-                    assignedSeatsLB.Items.Add($"{first_name} {last_name} seat {assignedSeat}");
+                    assignedSeatsLB.Items.Add($"{first_name} {last_name} assigned seat {assignedSeat}");
                 }
 
               
