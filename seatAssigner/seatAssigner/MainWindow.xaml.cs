@@ -58,6 +58,8 @@ namespace seatAssigner
                     brokeComps.Add(value);
                 }
 
+                int row = 0;
+
                 int counter = 0; //counts number of items added to list box 1
 
                 for (int i = 1; i < lines.Length; i++)
@@ -66,7 +68,9 @@ namespace seatAssigner
                     var column = line.Split(',');
                     first_name = column[0];
                     last_name = column[1];
-                    int assignedSeat = rand.Next(1,50);
+                    int assignedSeat;
+
+                    assignedSeat = rand.Next(1,50);
                   
 
                     if (usedSeats.Contains(Convert.ToString(assignedSeat)) ==true || usedSeats.Contains(Convert.ToString(brokeComps)) == true)
@@ -77,16 +81,30 @@ namespace seatAssigner
                         } while (usedSeats.Contains(Convert.ToString(assignedSeat)) == true || usedSeats.Contains(Convert.ToString(brokeComps)) == true);
                     }
 
-                    
+                    if (assignedSeat > 1 && assignedSeat <= 10)
 
-                    if(counter<=15)
+                        row = 1;
+
+                    else if (assignedSeat > 10 && assignedSeat <= 25)
+
+                        row = 2;
+
+                    else if (assignedSeat > 25 && assignedSeat <= 40)
+
+                        row = 3;
+
+                    else
+
+                        row = 4;
+
+                    if (counter<=15)
                     {
-                        assignedSeatsLB.Items.Add($"{first_name} {last_name} assigned seat: {assignedSeat}");
+                        assignedSeatsLB.Items.Add($"{first_name} {last_name} Computer number: {assignedSeat} Row {row}");
                         counter++;
                     }
                     else
                     {
-                        assignedSeatsLB2.Items.Add($"{first_name} {last_name} assigned seat: {assignedSeat}");
+                        assignedSeatsLB2.Items.Add($"{first_name} {last_name} Computer number: {assignedSeat} Row {row}");
 
                     }
 
