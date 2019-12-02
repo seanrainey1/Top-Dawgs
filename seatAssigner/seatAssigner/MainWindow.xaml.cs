@@ -51,12 +51,12 @@ namespace seatAssigner
 
 
 
-                //for (int i = 1; i < values.Length; i++) //adds all broken computer numbers to the brokecomps list
-                //{
-                //    var value = values[i];
+                for (int i = 1; i < values.Length; i++) //adds all broken computer numbers to the brokecomps list
+                {
+                    var value = values[i];
                     
-                //    brokeComps.Add(value);
-                //}
+                    brokeComps.Add(Convert.ToInt32(value));
+                }
 
                 int row = 0;
 
@@ -72,7 +72,7 @@ namespace seatAssigner
 
                     
 
-                    //assignedSeat = rand.Next(1,50);
+                    assignedSeat = rand.Next(1,50);
                   
 
                     if (usedSeats.Contains(assignedSeat) ==true || brokeComps.Contains(assignedSeat) == true)
