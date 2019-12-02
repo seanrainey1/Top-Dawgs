@@ -11,15 +11,23 @@
             <ColumnDefinition Width="181*"/>
             <ColumnDefinition Width="611*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="seatAssignBut" Content="Assign Seats" HorizontalAlignment="Left" Height="43" Margin="0,285,0,0" VerticalAlignment="Top" Width="132" Click="Button_Click"/>
-        <Button x:Name="nameReadBut" Content="Read Names" HorizontalAlignment="Left" VerticalAlignment="Top" Width="132" Margin="0,242,0,0" Height="28" Click="nameReadBut_Click"/>
-        <TextBox x:Name="fileReadTXT" HorizontalAlignment="Left" Height="33" Margin="0,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132"/>
-        <TextBox x:Name="brokeCompsTXT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="0,54,0,0"/>
-        <Button x:Name="ReadWorkstationsBut" Content="Read Workstations" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="0,93,0,0" Height="29" Click="ReadWorkstationsBut_Click"/>
-        <Button x:Name="Print" Content="Print" HorizontalAlignment="Left" Margin="0,349,0,0" VerticalAlignment="Top" Width="132" Height="26" Click="Print_Click"/>
-        <Grid x:Name="grid2" Grid.Column="1" HorizontalAlignment="Left" Height="377" Margin="10,14,0,0" VerticalAlignment="Top" Width="583">
-            <ListBox x:Name="assignedSeatsLB" HorizontalAlignment="Left" Height="357" Margin="10,10,0,0" VerticalAlignment="Top" Width="524"/>
+        <Button x:Name="seatAssignBut" Content="Assign Seats" HorizontalAlignment="Left" Height="43" Margin="10,233,0,0" VerticalAlignment="Top" Width="134" Click="Button_Click"/>
+        <Button x:Name="nameReadBut" Content="Read Names" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" Margin="10,170,0,0" Height="34" Click="nameReadBut_Click"/>
+        <TextBox x:Name="fileReadTXT" HorizontalAlignment="Left" Height="33" Margin="12,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132"/>
+        <TextBox x:Name="brokeCompsTXT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="12,14,0,0"/>
+        <Button x:Name="ReadWorkstationsBut" Content="Read Workstations" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="12,67,0,0" Height="29" Click="ReadWorkstationsBut_Click"/>
+        <Button x:Name="Print" Content="Print" HorizontalAlignment="Left" Margin="12,321,0,0" VerticalAlignment="Top" Width="132" Height="32" Click="Print_Click"/>
+        <Grid x:Name="grid2" Grid.Column="1" HorizontalAlignment="Left" Height="377" Margin="19.8,14,-13.6,0" VerticalAlignment="Top" Width="597">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="189*"/>
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="printView" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="395" VerticalAlignment="Top" Width="557" Margin="10,-9,0,-9">
+                <ListBox x:Name="assignedSeatsLB" HorizontalAlignment="Left" Height="367" Margin="10,20,0,0" VerticalAlignment="Top" Width="246"/>
+                <ListBox x:Name="assignedSeatsLB2" Height="367" Margin="261,20,18,0" VerticalAlignment="Top"/>
+            </Grid>
         </Grid>
+
 
     </Grid>
 </Window>

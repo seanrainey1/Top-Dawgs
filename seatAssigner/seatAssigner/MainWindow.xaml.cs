@@ -56,6 +56,8 @@ namespace seatAssigner
                     brokeComps.Add(comps);
                 }
 
+                int counter = 0;
+
                 for (int i = 1; i < lines.Length; i++)
                 {
                     var line = lines[i];
@@ -75,12 +77,27 @@ namespace seatAssigner
 
                     usedSeats.Add(Convert.ToString(assignedSeat));
 
-                    assignedSeatsLB.Items.Add($"{first_name} {last_name} assigned seat {assignedSeat}");
+                    if(counter<=15)
+                    {
+                        assignedSeatsLB.Items.Add($"{first_name} {last_name} assigned seat {assignedSeat}");
+                        counter++;
+                    }
+                    else
+                    {
+                        assignedSeatsLB2.Items.Add($"{first_name} {last_name} assigned seat {assignedSeat}");
+
+                    }
+
+                    
                 }
 
               
 
 
+            }
+            else
+            {
+                MessageBox.Show("Please use the provided CSV files");
             }
         }
 
@@ -104,7 +121,7 @@ namespace seatAssigner
             PrintDialog printDialog = new PrintDialog();
             if (printDialog.ShowDialog()== true)
             {
-                printDialog.PrintVisual(assignedSeatsLB, "Printing is in progess");
+                printDialog.PrintVisual(printView, "Printing is in progess");
             }
         }
     }
