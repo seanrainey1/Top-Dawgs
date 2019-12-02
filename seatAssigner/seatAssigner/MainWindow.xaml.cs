@@ -41,22 +41,22 @@ namespace seatAssigner
                 var first_name = string.Empty;
                 var last_name = string.Empty;
 
-                List<string> usedSeats = new List<string>(); //creates list to hold seat numbers which have already been used
+                List<int> usedSeats = new List<int>(); //creates list to hold seat numbers which have already been used
 
                 var values = File.ReadAllLines(brokeCompsTXT.Text); //reads in each line of broken computer csv
 
                 //var comps = string.Empty;
 
-                List<string> brokeComps = new List<string>(); // creates list to hold the broken computer csv values
+                List<int> brokeComps = new List<int>(); // creates list to hold the broken computer csv values
 
 
 
-                for (int i = 1; i < values.Length; i++) //adds all broken computer numbers to the brokecomps list
-                {
-                    var value = values[i];
+                //for (int i = 1; i < values.Length; i++) //adds all broken computer numbers to the brokecomps list
+                //{
+                //    var value = values[i];
                     
-                    brokeComps.Add(value);
-                }
+                //    brokeComps.Add(value);
+                //}
 
                 int row = 0;
 
@@ -68,17 +68,19 @@ namespace seatAssigner
                     var column = line.Split(',');
                     first_name = column[0];
                     last_name = column[1];
-                    int assignedSeat;
+                    int assignedSeat = 1;
 
-                    assignedSeat = rand.Next(1,50);
+                    
+
+                    //assignedSeat = rand.Next(1,50);
                   
 
-                    if (usedSeats.Contains(Convert.ToString(assignedSeat)) ==true || usedSeats.Contains(Convert.ToString(brokeComps)) == true)
+                    if (usedSeats.Contains(assignedSeat) ==true || brokeComps.Contains(assignedSeat) == true)
                     {
                         do
                         {
                             assignedSeat = rand.Next(1,50);
-                        } while (usedSeats.Contains(Convert.ToString(assignedSeat)) == true || usedSeats.Contains(Convert.ToString(brokeComps)) == true);
+                        } while (usedSeats.Contains(assignedSeat) == true || brokeComps.Contains(assignedSeat) == true);
                     }
 
                     if (assignedSeat > 1 && assignedSeat <= 10)
@@ -108,7 +110,7 @@ namespace seatAssigner
 
                     }
 
-                    usedSeats.Add(Convert.ToString(assignedSeat));
+                    usedSeats.Add(assignedSeat);
 
                 }
 
