@@ -45,7 +45,7 @@ namespace seatAssigner
 
                 var values = File.ReadAllLines(brokeCompsTXT.Text); //reads in each line of broken computer csv
 
-                var comps = string.Empty;
+                //var comps = string.Empty;
 
                 List<string> brokeComps = new List<string>(); // creates list to hold the broken computer csv values
 
@@ -53,10 +53,12 @@ namespace seatAssigner
 
                 for (int i = 1; i < values.Length; i++) //adds all broken computer numbers to the brokecomps list
                 {
-                    brokeComps.Add(comps);
+                    var value = values[i];
+                    
+                    brokeComps.Add(value);
                 }
 
-                int counter = 0;
+                int counter = 0; //counts number of items added to list box 1
 
                 for (int i = 1; i < lines.Length; i++)
                 {
@@ -64,31 +66,32 @@ namespace seatAssigner
                     var column = line.Split(',');
                     first_name = column[0];
                     last_name = column[1];
-                    int assignedSeat = rand.Next(50);
+                    int assignedSeat = rand.Next(1,50);
                   
 
-                    if (usedSeats.Contains(Convert.ToString(assignedSeat)) || usedSeats.Contains(Convert.ToString(brokeComps)))
+                    if (usedSeats.Contains(Convert.ToString(assignedSeat)) ==true || usedSeats.Contains(Convert.ToString(brokeComps)) == true)
                     {
                         do
                         {
-                            assignedSeat = rand.Next(50);
-                        } while (usedSeats.Contains(Convert.ToString(assignedSeat)) || usedSeats.Contains(Convert.ToString(brokeComps)));
+                            assignedSeat = rand.Next(1,50);
+                        } while (usedSeats.Contains(Convert.ToString(assignedSeat)) == true || usedSeats.Contains(Convert.ToString(brokeComps)) == true);
                     }
 
-                    usedSeats.Add(Convert.ToString(assignedSeat));
+                    
 
                     if(counter<=15)
                     {
-                        assignedSeatsLB.Items.Add($"{first_name} {last_name} assigned seat {assignedSeat}");
+                        assignedSeatsLB.Items.Add($"{first_name} {last_name} assigned seat: {assignedSeat}");
                         counter++;
                     }
                     else
                     {
-                        assignedSeatsLB2.Items.Add($"{first_name} {last_name} assigned seat {assignedSeat}");
+                        assignedSeatsLB2.Items.Add($"{first_name} {last_name} assigned seat: {assignedSeat}");
 
                     }
 
-                    
+                    usedSeats.Add(Convert.ToString(assignedSeat));
+
                 }
 
               

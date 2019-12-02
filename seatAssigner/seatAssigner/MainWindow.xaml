@@ -23,8 +23,8 @@
                 <ColumnDefinition Width="189*"/>
             </Grid.ColumnDefinitions>
             <Grid x:Name="printView" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="395" VerticalAlignment="Top" Width="557" Margin="10,-9,0,-9">
-                <ListBox x:Name="assignedSeatsLB" HorizontalAlignment="Left" Height="367" Margin="10,20,0,0" VerticalAlignment="Top" Width="246"/>
-                <ListBox x:Name="assignedSeatsLB2" Height="367" Margin="261,20,18,0" VerticalAlignment="Top"/>
+                <ListBox x:Name="assignedSeatsLB" HorizontalAlignment="Left" Height="353" Margin="10,20,0,0" VerticalAlignment="Top" Width="246"/>
+                <ListBox x:Name="assignedSeatsLB2" Height="353" Margin="261,20,18,0" VerticalAlignment="Top"/>
             </Grid>
         </Grid>
 
